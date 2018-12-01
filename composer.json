@@ -1,0 +1,18 @@
+{
+      "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "":"src/"
+        }
+    },
+  "require":{
+    "atk4/ui": "^1.0",
+    "ext-gd":"*",
+    "h4cc/wkhtmltopdf-i386": "*",
+    "dropbox/dropbox-sdk": "1.1.*",
+    "atk4/filestore": "dev-master",
+            "spatie/flysystem-dropbox": "dev-master",
+            "league/flysystem": "^1.1@dev",
+            "atk4/mastercrud": "dev-master"
+  }
+}
