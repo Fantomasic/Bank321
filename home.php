@@ -6,10 +6,11 @@ $app->initLayout('Centered');
 $client=new Client($db);
 $client->load($_SESSION['id']);
 $button=$app->add(['Button','Create new account','green']);
-$button->on('click',function($button){
+$button->link(['new_account2']);
+/*$button->on('click',function($button){
   $str = 'LV36ABRA';
   for ($i = 1;$i= 13;$i++){
-  $str = $str. rand(0,9);
+  $str = $str.rand(0,9);
   }
   $new_account = new Account($db);
   $new_account->client_id = $_SESSION['id'];
@@ -18,7 +19,8 @@ $button->on('click',function($button){
   $new_account->save();
 
   return true;
-});
+});*/
 $account=$client->ref('Account');
 $grid=$app->add('Grid');
 $grid->setModel($account);
+$grid->addDecorator('number',new \atk4\ui\TableColumn\Link('account_overview.php?number_id={$id}'))

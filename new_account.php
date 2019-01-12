@@ -12,5 +12,5 @@ $button=$app->add(['Button','Back']);
 $button->link(['home']);
 
 $form->onSubmit(function($form){
-  
-}
+
+});
