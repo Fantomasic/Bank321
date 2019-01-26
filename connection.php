@@ -17,6 +17,8 @@ function init() {
 parent::init();
 $this->addField('balance',['type'=>'money']);
 $this->addField('account_number');
+
 $this->hasOne('client_id',new Client)->addTitle();
+
 }
 }

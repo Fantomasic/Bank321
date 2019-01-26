@@ -23,4 +23,4 @@ $button->link(['new_account2']);
 $account=$client->ref('Account');
 $grid=$app->add('Grid');
 $grid->setModel($account);
-$grid->addDecorator('number',new \atk4\ui\TableColumn\Link('account_overview.php?number_id={$id}'));
+$grid->addDecorator('account_number',new \atk4\ui\TableColumn\Link('account_overview.php?number_id={$id}'));
