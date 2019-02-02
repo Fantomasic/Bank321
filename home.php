@@ -7,6 +7,9 @@ $client=new Client($db);
 $client->load($_SESSION['id']);
 $button=$app->add(['Button','Create new account','green']);
 $button->link(['new_account2']);
+$button=$app->add(['Button','Clicker','purple']);
+$button->link(['clicker']);
+
 /*$button->on('click',function($button){
   $str = 'LV36ABRA';
   for ($i = 1;$i= 13;$i++){
