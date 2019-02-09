@@ -1,0 +1,4 @@
+$_SESSION['i']=$_SESSION['i']+1;
+$button->on('click', function($action){
+  $_SESSION['i']=$_SESSION['i']+1;
+  return $action->text($_SESSION['i']);
