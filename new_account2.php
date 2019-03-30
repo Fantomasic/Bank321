@@ -11,5 +11,7 @@ $new_account = new Account($db);
 $new_account['client_id'] = $_SESSION['id'];
 $new_account['account_number'] = $str;
 $new_account['balance'] = 0;
+$new_account['currency'] = 'eur';
 $new_account->save();
+
 header('location: home.php');

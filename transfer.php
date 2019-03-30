@@ -3,10 +3,21 @@ session_start();
 require 'connection.php';
 $app = new \atk4\ui\App('Transfers');
 $app->initLayout('Centered');
-$form =$app->layout->add('Form');
-$form->addField('sender');
-$form->addField('receiver');
-$form->addField('money');
+
+$client = new Client($db);
+$client -> load($_SESSION['id']);
+$sen=$client->ref('Account');
+foreach ($sen as $s) {
+    $a[] = $s['account_number'];
+}
+
+$m=new \atk4\data\Model();
+$m-> addField('Sender',['enum'=>$a]);
+$m-> addField('Receiver');
+$m->addField('money');
+$form = $app ->add(['Form']);
+$form->setModel($m);
+
   $form->onSubmit(function($form) use($db){
   $bank1 = new Account($db);
   $bank2 = new Account($db);
