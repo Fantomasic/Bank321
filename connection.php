@@ -18,6 +18,7 @@ parent::init();
 $this->addField('balance',['type'=>'money']);
 $this->addField('account_number');
 $this->addField('currency');
+$this->addField('credit_balance');
 $this->hasOne('client_id',new Client)->addTitle();
 
 }

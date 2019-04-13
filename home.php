@@ -9,7 +9,8 @@ $button=$app->add(['Button','Create new account','green']);
 $button->link(['new_account2']);
 $button=$app->add(['Button','Clicker','purple']);
 $button->link(['clicker']);
-$button=$app->add(['Button,'])
+$button=$app->add(['Button','Take on credit','red']);
+$button->link(['credit']);
 
 /*$button->on('click',function($button){
   $str = 'LV36ABRA';

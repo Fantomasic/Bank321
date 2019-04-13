@@ -22,8 +22,8 @@ $form->setModel($m);
   $bank1 = new Account($db);
   $bank2 = new Account($db);
   $cur =   new Currency($db);
-  $bank1->loadBy('account_number',$form->model['sender']);
-  $bank2->loadBy('account_number',$form->model['receiver']);
+  $bank1->loadBy('account_number',$form->model['Sender']);
+  $bank2->loadBy('account_number',$form->model['Receiver']);
   $res1=$bank1['balance'];
   $res2=$bank2['balance'];
   if ($bank1['currency']==$bank2['currency']){
